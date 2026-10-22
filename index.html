@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Student Management System</h2>
+    <input type="text" id="name" placeholder="Enter student name">
+    <br><br>
+    <input type="text" id="roll" placeholder="Enter roll number">
+    <br><br>
+    <button onclick="addStudent()">Add Student</button>
+    <p id="res"></p>
+    <script>
+        function addStudent() {
+            const name = document.getElementById('name').value;
+            const roll = document.getElementById('roll').value;
+            if (!name || !roll) {
+                alert('Please enter both name and roll number.');
+                return;
+            }
+            document.getElementById('res').innerText = `Student Name: ${name}, with Roll Number: ${roll}`;
+        }
+    </script>
+</body>
+</html>
